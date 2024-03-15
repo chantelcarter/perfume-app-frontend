@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import {Routes, Route } from "react-router-dom"
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { useState } from 'react'
+import Home from "./pages/Home"
+import SignIn from "./pages/SignIn"
+import SignUp from "./pages/SignUp"
+import PerfumeIndex from "./pages/PerfumeIndex"
+import PerfumeShow from "./pages/PerfumeShow"
+import PerfumeProtectedIndex from "./pages/PerfumeProtectedIndex"
+import PerfumeNew from "./pages/PerfumeNew"
+import PerfumeEdit from "./pages/PerfumeEdit"
+import NotFound from "./pages/NotFound"
+import mockUsers from './mockUsers'
+// import mockPerfumes from './mockPerfumes'
 
-function App() {
+const App = () => {
+  const [currentUser, setCurrentUser] = useState(mockUsers[0])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/perfumeindex" element={<PerfumeIndex />} />
+        {currentUser && (      
+          <Route path="/myperfumes" element={<PerfumeProtectedIndex />} />
+        )}
+        <Route path="/perfumeshow/:id" element={<PerfumeShow />} />
+        <Route path="/perfumenew" element={<PerfumeNew />} />
+        <Route path="/perfumeedit/:id" element={<PerfumeEdit />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
