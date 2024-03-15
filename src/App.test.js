@@ -1,8 +1,28 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, waitFor } from "@testing-library/react"
+import App from "./App"
+import { BrowserRouter } from "react-router-dom"
+import { MemoryRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+describe("<App />", () => {
+  it("renders an nav list", () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    )
+
+    const list = screen.getByRole("list")
+    expect(list).toBeInTheDocument()
+  })
+
+  it('renders Index component when "/apartmentindex" route is accessed', () => {
+    render(
+      <MemoryRouter initialEntries={['/perfumeindex']}>
+        <App />
+      </MemoryRouter>
+    );
+    const index = screen.getByText("View Perfumes")
+    expect(index).toBeInTheDocument();
+  });
+})
