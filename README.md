@@ -28,5 +28,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Add a PerfumeEdit page
 - Add a NotFound page
 - Add mock data for User and Perfume
+#### React Router
+- Be sure to wrap `<App />` with `<BrowserRouter></BrowserRouter>` in > src > index.js
 
+```
+<React.StrictMode>
+<BrowserRouter>
+<App />
+</BrowserRouter>
+</React.StrictMode>
+```
 
+- and add `import { BrowserRouter } from "react-router-dom"` to your imports

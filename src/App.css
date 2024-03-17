@@ -3,9 +3,37 @@
 }
 
 a {
-  color: black !important;
+  color: white !important;
 }
 
 a.active {
   text-decoration: underline;
+}
+
+body {
+  background-image: url('./assets/tree-leaves.jpg');
+  background-size: cover;
+  background-position: 20% 50%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white !important;
+}
+
+.home-containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.home-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.footer-link {
+  margin-left: 5px;
+  margin-right: 5px;
 }
