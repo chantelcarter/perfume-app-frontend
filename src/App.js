@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/perfumeindex" element={<PerfumeIndex />} />
+        <Route path="/perfumeindex" element={<PerfumeIndex perfumes={perfumes} />} />
         {currentUser && (      
           <Route path="/myperfumes" element={<PerfumeProtectedIndex />} />
         )}
