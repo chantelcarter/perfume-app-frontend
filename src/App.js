@@ -13,10 +13,16 @@ import PerfumeNew from "./pages/PerfumeNew"
 import PerfumeEdit from "./pages/PerfumeEdit"
 import NotFound from "./pages/NotFound"
 import mockUsers from './mockUsers'
-// import mockPerfumes from './mockPerfumes'
+import mockPerfumes from './mockPerfumes'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
+  const [perfumes, setPerfumes] = useState(mockPerfumes)
+
+  const createPerfume = (perfume) => {
+    console.log(perfume)
+  }
+
   return (
     <>
       <Header />
@@ -29,7 +35,7 @@ const App = () => {
           <Route path="/myperfumes" element={<PerfumeProtectedIndex />} />
         )}
         <Route path="/perfumeshow/:id" element={<PerfumeShow />} />
-        <Route path="/perfumenew" element={<PerfumeNew />} />
+        <Route path="/perfumenew" element={<PerfumeNew currentUser={currentUser} createPerfume={createPerfume} />} />
         <Route path="/perfumeedit/:id" element={<PerfumeEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
