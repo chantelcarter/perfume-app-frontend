@@ -34,7 +34,7 @@ const App = () => {
         {currentUser && (      
           <Route path="/myperfumes" element={<PerfumeProtectedIndex />} />
         )}
-        <Route path="/perfumeshow/:id" element={<PerfumeShow />} />
+        <Route path="/perfumeshow/:id" element={<PerfumeShow perfumes={perfumes} />} />
         <Route path="/perfumenew" element={<PerfumeNew currentUser={currentUser} createPerfume={createPerfume} />} />
         <Route path="/perfumeedit/:id" element={<PerfumeEdit />} />
         <Route path="*" element={<NotFound />} />
