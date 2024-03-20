@@ -23,6 +23,10 @@ const App = () => {
     console.log(perfume)
   }
 
+  const deletePerfume = (id) => {
+    console.log(id)
+  }
+
   return (
     <>
       <Header />
@@ -32,7 +36,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/perfumeindex" element={<PerfumeIndex perfumes={perfumes} />} />
         {currentUser && (      
-          <Route path="/myperfumes" element={<PerfumeProtectedIndex />} />
+          <Route path="/myperfumes" element={<PerfumeProtectedIndex perfumes={perfumes} currentUser={currentUser} deletePerfume={deletePerfume} />} />
         )}
         <Route path="/perfumeshow/:id" element={<PerfumeShow perfumes={perfumes} />} />
         <Route path="/perfumenew" element={<PerfumeNew currentUser={currentUser} createPerfume={createPerfume} />} />
