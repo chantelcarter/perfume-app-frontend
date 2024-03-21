@@ -24,6 +24,11 @@ const App = () => {
     console.log(perfume)
   }
 
+  const updatePerfume = (perfume, id) => {
+    console.log(perfume)
+    console.log(id)
+  }
+
   const deletePerfume = (id) => {
     console.log(id)
   }
@@ -105,7 +110,7 @@ const App = () => {
         )}
         <Route path="/perfumeshow/:id" element={<PerfumeShow perfumes={perfumes} />} />
         <Route path="/perfumenew" element={<PerfumeNew currentUser={currentUser} createPerfume={createPerfume} />} />
-        <Route path="/perfumeedit/:id" element={<PerfumeEdit />} />
+        <Route path="/perfumeedit/:id" element={<PerfumeEdit perfumes={perfumes} updatePerfume={updatePerfume} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
