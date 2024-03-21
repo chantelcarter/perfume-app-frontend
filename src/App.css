@@ -47,3 +47,19 @@ body {
   width: 200px;
   margin: 10px;
 }
+
+.about-image {
+  width: 336.4px;
+  height: 519.6px;
+  padding-top: 20px;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.about-text {
+  padding: 20px;
+}
