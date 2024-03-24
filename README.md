@@ -83,3 +83,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - This will not change the data of your Index because your application pulling from mockPerfumes. But once connected to the backend, will delete the item in your database.
 
 - Pass deletePerfume function to needed component through routes, component will use function as a prop.
+
+### Contact Us Page Dependencies
+- Use the following command in terminal to use Material UI icons: `yarn add @mui/icons-material @mui/material @emotion/styled @emotion/react`
