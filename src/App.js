@@ -67,7 +67,15 @@ const App = () => {
   }
 
   const deletePerfume = (id) => {
-    console.log(id)
+    fetch(`http://localhost:3000/perfumes/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Perfume delete errors:", errors))
   }
 
   const signUp = (userInfo) => {

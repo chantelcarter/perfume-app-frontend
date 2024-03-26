@@ -83,7 +83,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - This will not change the data of your Index because your application pulling from mockPerfumes. But once connected to the backend, will delete the item in your database.
 
 - Pass deletePerfume function to needed component through routes, component will use function as a prop.
+```
+  <Route path="/myperfumes" element={<PerfumeProtectedIndex perfumes={perfumes} currentUser={currentUser} deletePerfume={deletePerfume} />} />
+```
+- in PerfumeProtectIndex.js:
+```
+const PerfumeProtectedIndex = ({ perfumes, currentUser, deletePerfume }) => {
+  <YOUR FUNCTIONS/RETURN CONTENTS>
+}
+```
+```
+  <Button onClick={() => deletePerfume(perfume.id)} className='perfume-button'>Delete Perfume</Button>
 
+```
 ### Contact Us Page Dependencies
 - Use the following command in terminal to use Material UI icons: `yarn add @mui/icons-material @mui/material @emotion/styled @emotion/react`
 
@@ -153,5 +165,20 @@ useEffect(() => {
       .then((response) => response.json())
       .then(() => readPerfume())
       .catch((errors) => console.log("Perfume update errors:", errors))
+  }
+```
+
+### Connecting Delete
+```
+  const deletePerfume = (id) => {
+    fetch(`http://localhost:3000/perfumes/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Perfume delete errors:", errors))
   }
 ```
