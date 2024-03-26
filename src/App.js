@@ -41,7 +41,16 @@ const App = () => {
   }
 
   const createPerfume = (perfume) => {
-    console.log(perfume)
+    fetch("http://localhost:3000/perfumes", {
+      body: JSON.stringify(perfume),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Herb create errors:", errors))
   }
 
   const updatePerfume = (perfume, id) => {

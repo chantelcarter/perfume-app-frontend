@@ -112,5 +112,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```
   const [currentUser, setCurrentUser] = useState(null)
 ```
+- Create a function that checks if a user exists and set the state to the logged in user if it does. This function will live in the `useEffect` hook
+```
+useEffect(() => {
+    const loggedInUser = localStorage.getItem("user")
+    if(loggedInUser) {
+      setCurrentUser(JSON.parse(loggedInUser))
+    }
+    readPerfume()
+  }, [])
+```
     - Once the user was set to null, I had to sign up a new user, and the mockUser perfumes I was able to see before were no longer there.
 
+### Connecting Create
+```
+  const createPerfume = (perfume) => {
+    fetch("http://localhost:3000/perfumes", {
+      body: JSON.stringify(perfume),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Herb create errors:", errors))
+  }
+```
+
+### Connecting Update
