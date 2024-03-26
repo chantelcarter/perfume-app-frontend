@@ -2,7 +2,7 @@ import {Routes, Route, useNavigate } from "react-router-dom"
 import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Home from "./pages/Home"
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
@@ -21,9 +21,24 @@ import mockUsers from './mockUsers'
 import mockPerfumes from './mockPerfumes'
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0])
-  const [perfumes, setPerfumes] = useState(mockPerfumes)
+  const [currentUser, setCurrentUser] = useState(null)
+  const [perfumes, setPerfumes] = useState([])
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user")
+    if(loggedInUser) {
+      setCurrentUser(JSON.parse(loggedInUser))
+    }
+    readPerfume()
+  }, [])
+
+  const readPerfume = () => {
+    fetch("http://localhost:3000/perfumes")
+      .then((response) => response.json())
+      .then((data) => setPerfumes(data))
+      .catch((errors) => console.log("Perfume read errors:", errors))
+  }
 
   const createPerfume = (perfume) => {
     console.log(perfume)
