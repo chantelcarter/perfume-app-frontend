@@ -86,3 +86,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Contact Us Page Dependencies
 - Use the following command in terminal to use Material UI icons: `yarn add @mui/icons-material @mui/material @emotion/styled @emotion/react`
+
+### Connecting Read
+- `useEffect()` will handle fetching data from the backend schema.
+```
+ useEffect(() => {
+    readPerfume()
+  }, [])
+```
+```
+  const readPerfume = () => {
+      fetch("http://localhost:3000/perfumes")
+      .then((response) => response.json())
+      .then((data) => setPerfumes(data))
+      .catch((errors) => console.log("Perfume read errors:", errors))
+  }
+```
+- Remove the `mockPerfume` data and start with an empty array for useState.
+```
+  const [perfumes, setPerfumes] = useState([])
+```
+    - *NOTE*: I was able to pull the data from the backend with mockPerfume still in the useState. (I learned that it was because I was still pulling from the mockUser data.)
+
+- Remove `mockUser[0]` data and start with null for useState
+```
+  const [currentUser, setCurrentUser] = useState(null)
+```
+    - Once the user was set to null, I had to sign up a new user, and the mockUser perfumes I was able to see before were no longer there.
+
