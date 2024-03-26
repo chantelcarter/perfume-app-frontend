@@ -50,12 +50,20 @@ const App = () => {
     })
       .then((response) => response.json())
       .then(() => readPerfume())
-      .catch((errors) => console.log("Herb create errors:", errors))
+      .catch((errors) => console.log("Perfume create errors:", errors))
   }
 
   const updatePerfume = (perfume, id) => {
-    console.log(perfume)
-    console.log(id)
+    fetch(`http://localhost:3000/perfumes/${id}`, {
+      body: JSON.stringify(perfume),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Perfume update errors:", errors))
   }
 
   const deletePerfume = (id) => {
