@@ -141,3 +141,17 @@ useEffect(() => {
 ```
 
 ### Connecting Update
+```
+  const updatePerfume = (perfume, id) => {
+    fetch(`http://localhost:3000/perfumes/${id}`, {
+      body: JSON.stringify(perfume),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
+      .then(() => readPerfume())
+      .catch((errors) => console.log("Perfume update errors:", errors))
+  }
+```
