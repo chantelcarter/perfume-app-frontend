@@ -11,7 +11,7 @@ const Header = ({currentUser, logout}) => {
   }
   return (
     <>
-      <Nav className="nav">
+      <Nav className="navbar">
       <NavLink to="/">
           <img className="logo"
             alt="logo"
