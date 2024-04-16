@@ -21,7 +21,7 @@ const ContactUs = () => {
       <div>
         We're eager to hear from perfume brands of all sizes, so please share your news with us. For efficient communication, <a href="mailto:carter.chantel.a@gmail.com">email us</a> or reach out to team members directly. Providing detailed information allows our editors to seamlessly feature your products in our encyclopedia.
         <h2>
-          Meet the Perfume App Team!
+          Meet the Scentsorial Team!
         </h2>
         <div>
         {teamMembers.map((member) => (
@@ -47,7 +47,7 @@ const ContactUs = () => {
                 <MailOutlineIcon />
               </a>
           </div>
-      ))}
+        ))}
         </div>
       </div>
     </>
