@@ -2,33 +2,33 @@ import React from 'react'
 
 const PrivacyPolicy = () => {
   return (
-    <div>The Perfume App Principles
-    We built The Perfume App to make it easy to share information and express yourself to your friends and people around you. We understand you may not want everyone in the world to have the information you share on The Perfume App; that is why we give you control of your information. Our default privacy settings limit the information displayed in your profile and you can use board (then click the profile link) also perfume wardrobe to adjust settings or edit/remove information about you displayed on this site.
+    <div>Scentsorial Principles
+    We built Scentsorial to make it easy to share information and express yourself to your friends and people around you. We understand you may not want everyone in the world to have the information you share on Scentsorial; that is why we give you control of your information. Our default privacy settings limit the information displayed in your profile and you can use board (then click the profile link) also perfume wardrobe to adjust settings or edit/remove information about you displayed on this site.
     
-    The Perfume App follows two core principles:
+    Scentsorial follows two core principles:
     1. You should have control over your personal information.
-    The Perfume App helps you share information with your friends and people around you. You choose what information you put in your profile, including contact and personal information, pictures, interests and groups you join. And you control the users with whom you share that information through the privacy settings on the Privacy page.
+    Scentsorial helps you share information with your friends and people around you. You choose what information you put in your profile, including contact and personal information, pictures, interests and groups you join. And you control the users with whom you share that information through the privacy settings on the Privacy page.
     
     2. You should have access to the information others want to share.
-    There is an increasing amount of information available out there, and you may want to know what relates to you, your friends, and people around you. We want to help you easily get that information. Sharing information should be easy. And we want to provide you with the privacy tools necessary to control how and with whom you share that information. If you have questions or ideas, please send them to gdpr@The Perfume App.com .
+    There is an increasing amount of information available out there, and you may want to know what relates to you, your friends, and people around you. We want to help you easily get that information. Sharing information should be easy. And we want to provide you with the privacy tools necessary to control how and with whom you share that information. If you have questions or ideas, please send them to gdpr@Scentsorial.com .
     
-    The Perfume App's Privacy Policy
-    The Perfume App's Privacy Policy is designed to help you understand how we collect and use the personal information you decide to share, and help you make informed decisions when using The Perfume App, located at www.The Perfume App.com and its directly associated domains (collectively, "The Perfume App" or "Website")
-    By using or accessing The Perfume App, you are accepting the practices described in this Privacy Policy.
+    Scentsorial's Privacy Policy
+    Scentsorial's Privacy Policy is designed to help you understand how we collect and use the personal information you decide to share, and help you make informed decisions when using Scentsorial, located at www.Scentsorial.com and its directly associated domains (collectively, "Scentsorial" or "Website")
+    By using or accessing Scentsorial, you are accepting the practices described in this Privacy Policy.
     
     The Information We Collect
-    When you visit The Perfume App you provide us with two types of information: personal information you knowingly choose to disclose that is collected by us and Web Site use information collected by us as you interact with our Web Site.
+    When you visit Scentsorial you provide us with two types of information: personal information you knowingly choose to disclose that is collected by us and Web Site use information collected by us as you interact with our Web Site.
     
-    The Perfume App.com respects your privacy. We take precautions to safeguard your personally identifiable information.
+    Scentsorial.com respects your privacy. We take precautions to safeguard your personally identifiable information.
     Data that you voluntarily provide
-    The individual must provide the Data requested during registration to The Perfume App.com or registration to any Service at The Perfume App.com in the required fields of the questionnaire, indicated by an asterisk(*), in order to benefit from the service or the desired offer. Without this information, the person's registration for the Service or offer will not be effective and the person will not be able to benefit from this Service or offer. Answers to the fields that are not indicated with an asterisk (*) are optional.
+    The individual must provide the Data requested during registration to Scentsorial.com or registration to any Service at Scentsorial.com in the required fields of the questionnaire, indicated by an asterisk(*), in order to benefit from the service or the desired offer. Without this information, the person's registration for the Service or offer will not be effective and the person will not be able to benefit from this Service or offer. Answers to the fields that are not indicated with an asterisk (*) are optional.
     
     If you want to take part in quizzes and surveys you are asked to provide personal data like your name, address, telephone number, age and similar. Some of them are requested and indicated by an asterisk(*), in order to receive shipment with prize. If indicated on the form, we will share the winner's information with a 3rd party, for example the sponsor who will send you shipment. If you do not want to share that information with a 3rd party you should not take a part in the quiz or survey. We may display statistical results of quiz or survey but we will not display it on the site, give, sell or share with 3rd party.
     
-    We use the information that you voluntarily provide for such purposes as responding to your requests, statistical purposes,awarding prizes for contests we organize on The Perfume App.com, improving our service and communicating more effectively with you.
+    We use the information that you voluntarily provide for such purposes as responding to your requests, statistical purposes,awarding prizes for contests we organize on Scentsorial.com, improving our service and communicating more effectively with you.
     
     Automatic Information
-    The Perfume App.com receives and stores certain types of information automatically whenever you interact with us. For example, like many Web sites, we use 'cookies'. In that way, we obtain certain types of information when your Web browser accesses our site. There are a number of companies that offer utilities designed to help you visit Web sites anonymously. Although Fragrantica.com will not be able to provide you with a personalized experience if we cannot recognize you, you should be aware that these disabling tools exist.
+    Scentsorial.com receives and stores certain types of information automatically whenever you interact with us. For example, like many Web sites, we use 'cookies'. In that way, we obtain certain types of information when your Web browser accesses our site. There are a number of companies that offer utilities designed to help you visit Web sites anonymously. Although Fragrantica.com will not be able to provide you with a personalized experience if we cannot recognize you, you should be aware that these disabling tools exist.
     
     Cookies are alphanumeric identifiers that Fragrantica.com transfers to your computer's hard drive through your Web browser. They enable our systems to recognize your browser. If we recognize you, Fragrantica.com can provide more customized or personalized features each time you log on to our site.
     The 'help' portion of the toolbar on most browsers will tell you how to prevent your browser from accepting new cookies, how to have the browser notify you when you receive a new cookie, and/or how to disable cookies altogether. However, cookies allow you to take full advantage of our site's features. Fragrantica.com recommends that you leave them turned on.

@@ -146,7 +146,7 @@ const App = () => {
     <>
       <Header currentUser={currentUser} logout={logout}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home perfumes={perfumes} />} />
         <Route path="/signin" element={<SignIn signIn={signIn}/>} />
         <Route path="/signup" element={<SignUp signUp={signUp} />} />
         <Route path="/aboutus" element={<AboutUs />} />
