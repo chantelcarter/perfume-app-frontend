@@ -33,11 +33,14 @@ footer a {
 body {
   margin: 0;
   padding: 0;
-  color: white !important;
+  color: black !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: blueviolet !important;
 }
+
+/* Home Styling */
 
 .home-containter {
   display: flex;
@@ -52,6 +55,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-link {
