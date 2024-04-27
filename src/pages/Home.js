@@ -2,6 +2,7 @@ import React from 'react';
 import banner from '../assets/flower-banner.png'
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
+import { NavLink } from "react-router-dom";
 
 const Home = ({ perfumes }) => {
   return (
@@ -20,20 +21,24 @@ const Home = ({ perfumes }) => {
               perfumes.map((perfume) => (
                   <Carousel.Item key={perfume.id}>
                     <div className="d-flex justify-content-center">
-                      <img
-                      className="carousel-image"
-                      src={perfume.image}
-                      alt="First slide"
-                    />
+                      <NavLink
+                      to={`/perfumeshow/${perfume.id}`}
+                      className="nav-link"
+                      >
+                        <img
+                          className="carousel-image"
+                          src={perfume.image}
+                          alt="First slide"
+                        />
+                        <Carousel.Caption>
+                          <h5>{perfume.name}</h5>
+                          <p>By {perfume.designer}</p>
+                        </Carousel.Caption> 
+                      </NavLink>
                     </div>
-                    <Carousel.Caption>
-                      <h5>{perfume.name}</h5>
-                      <p>By {perfume.designer}</p>
-                    </Carousel.Caption>
                   </Carousel.Item>
               ))
             }
-            
           </Carousel>
         </Container>
       </section>
