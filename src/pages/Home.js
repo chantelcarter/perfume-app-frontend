@@ -15,22 +15,21 @@ const Home = ({ perfumes }) => {
             <h2>Newest Fragrances</h2>
             <div className='subtitle'>Check out the newest fragrances in our library to add to your collection</div>
           </div>
-          <Carousel>
+          <Carousel className='carousel'>
             {
               perfumes.map((perfume) => (
                   <Carousel.Item key={perfume.id}>
-                    <img
+                    <div className="d-flex justify-content-center">
+                      <img
                       className="carousel-image"
                       src={perfume.image}
                       alt="First slide"
                     />
-                    <blockquote>
-                      <p>{perfume.name}</p>
-                      <cite>
-                        <span className='name'>{perfume.name}</span>
-                        <span className='designation'>{perfume.designer}</span>
-                      </cite>
-                    </blockquote>
+                    </div>
+                    <Carousel.Caption>
+                      <h5>{perfume.name}</h5>
+                      <p>By {perfume.designer}</p>
+                    </Carousel.Caption>
                   </Carousel.Item>
               ))
             }
