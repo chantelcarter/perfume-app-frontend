@@ -6,12 +6,14 @@ import NewestArrivals from '../components/NewestArrivals';
 const Home = ({ perfumes }) => {
   return (
     <>
-      {/* <div className='home-container'>Home
-        <img src={banner} alt="home banner of flower" className='home-banner'/>
-      </div> */}
-      <div className='home-contents'>
-        <PerfumeCarousel perfumes={perfumes} />
-        <NewestArrivals perfumes={perfumes} />
+      <div className='home-container'>
+        <div className='home-image'>
+          <img src={banner} alt="home banner of flower" className='home-banner'/>
+        </div>
+        <div className='home-contents'>
+          <PerfumeCarousel perfumes={perfumes} />
+          <NewestArrivals perfumes={perfumes} />
+        </div>
       </div>
     </>
   );

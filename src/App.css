@@ -1,3 +1,8 @@
+/* Header Styling */
+
+header {
+  padding-bottom: 30px !important;
+}
 .logo {
   width: 40px;
 }
@@ -13,6 +18,7 @@ a.active {
 .navbar {
   position: relative;
   z-index: 1000;
+  border-bottom: .5px solid;
 }
 
 /* Footer */
@@ -48,10 +54,10 @@ body {
 
 /* Home Styling */
 
-.home-containter {
+.home-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .home-contents {
@@ -61,12 +67,13 @@ body {
 }
 
 .home-banner {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 850px;
+  padding-bottom: 50px;
+}
+
+.home-image {
+  display: flex;
+  justify-content: center;
 }
 
 /* Home - Newest Arrivals */
