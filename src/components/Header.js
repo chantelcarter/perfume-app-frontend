@@ -11,47 +11,49 @@ const Header = ({currentUser, logout}) => {
   }
   return (
     <>
-      <Nav className="navbar">
-      <NavLink to="/">
-          <img className="logo"
-            alt="logo"
-            src={logo}
-          />
-        </NavLink>
-        <NavItem>
-          <NavLink to="/" className="nav-link">Home</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/perfumeindex" className="nav-link">View Perfumes</NavLink>
-        </NavItem>
-        {currentUser && (
-          <>
+      <header>
+        <Nav className="navbar">
+          <NavLink to="/">
+              <img className="logo"
+                alt="logo"
+                src={logo}
+              />
+            </NavLink>
             <NavItem>
-              <NavLink to="/myperfumes" className="nav-link">My Collection</NavLink>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/perfumenew" className="nav-link">Create Perfume</NavLink>
+              <NavLink to="/perfumeindex" className="nav-link">View Perfumes</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink className="nav-link" onClick={handleClick}>Log Out</NavLink>
-            </NavItem>
-          </>
-        )}
-        {!currentUser && (
-          <>
-            <NavItem>
-              <NavLink to="/signin" className="nav-link">
-                Sign In
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/signup" className="nav-link">
-                Sign Up
-              </NavLink>
-          </NavItem>
-          </>
-        )}
-      </Nav>
+            {currentUser && (
+              <>
+                <NavItem>
+                  <NavLink to="/myperfumes" className="nav-link">My Collection</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/perfumenew" className="nav-link">Create Perfume</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" onClick={handleClick}>Log Out</NavLink>
+                </NavItem>
+              </>
+            )}
+            {!currentUser && (
+              <>
+                <NavItem>
+                  <NavLink to="/signin" className="nav-link">
+                    Sign In
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/signup" className="nav-link">
+                    Sign Up
+                  </NavLink>
+              </NavItem>
+              </>
+            )}
+        </Nav>
+      </header>
     </>
   )
 }
