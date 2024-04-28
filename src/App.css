@@ -44,7 +44,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: blueviolet !important;
 }
 
 /* Home Styling */
@@ -55,6 +54,12 @@ body {
   align-items: center;
 }
 
+.home-contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .home-banner {
   width: 100%;
   height: auto;
@@ -63,6 +68,15 @@ body {
   top: 0;
   left: 0;
 }
+
+/* Home - Newest Arrivals */
+
+.newest-arrivals-containter {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home - Carousel */
 
 .carousel {
   width: 600px;

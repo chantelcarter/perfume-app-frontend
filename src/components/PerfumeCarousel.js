@@ -8,10 +8,6 @@ const PerfumeCarousel = ({ perfumes }) => {
     <>
       <section id='carousel' className='carousel-block'>
         <Container fluid>
-          <div className='title-holder'>
-            <h2>Newest Fragrances</h2>
-            <div className='subtitle'>Check out the newest fragrances in our library to add to your collection</div>
-          </div>
           <Carousel className='carousel'>
             {
               perfumes.map((perfume) => (
@@ -33,7 +29,7 @@ const PerfumeCarousel = ({ perfumes }) => {
                       </NavLink>
                     </div>
                   </Carousel.Item>
-              ))
+              )).slice(-3)
             }
           </Carousel>
         </Container>

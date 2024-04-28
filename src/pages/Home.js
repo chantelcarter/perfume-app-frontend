@@ -1,6 +1,7 @@
 import React from 'react';
 import banner from '../assets/flower-banner.png'
 import PerfumeCarousel from '../components/PerfumeCarousel';
+import NewestArrivals from '../components/NewestArrivals';
 
 const Home = ({ perfumes }) => {
   return (
@@ -8,7 +9,10 @@ const Home = ({ perfumes }) => {
       {/* <div className='home-container'>Home
         <img src={banner} alt="home banner of flower" className='home-banner'/>
       </div> */}
-      <PerfumeCarousel perfumes={perfumes} />
+      <div className='home-contents'>
+        <PerfumeCarousel perfumes={perfumes} />
+        <NewestArrivals perfumes={perfumes} />
+      </div>
     </>
   );
 }
