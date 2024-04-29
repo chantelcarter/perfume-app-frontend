@@ -32,6 +32,9 @@ footer {
   text-align: center;
   padding: 5px;
   display: flex;
+  position: absolute;
+  height: 2.5rem;
+  border-top: .5px solid;
 }
 
 footer a {
@@ -50,6 +53,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding-bottom: 2.5rem;
 }
 
 /* Home Styling */
@@ -137,4 +142,13 @@ body {
 
 .member-image{
   width: 350px;
+}
+
+/* NotFound Styling */
+
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
