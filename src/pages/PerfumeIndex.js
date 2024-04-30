@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
+import {  Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 const PerfumeIndex = ({ perfumes }) => {
@@ -14,35 +7,31 @@ const PerfumeIndex = ({ perfumes }) => {
     <>
       <div className="index-body">
         <h1>Perfume Collection</h1>
-        <div className="card-body">
+        <div className="index-container">
           {perfumes?.map((perfume, index) => {
             return (
-              <Card key={index} className="card">
-                <CardTitle>
-                  <b>{perfume.name}</b>
-                </CardTitle>
-                <CardSubtitle>
-                      by {perfume.designer}
-                    </CardSubtitle>
-                <CardImg
-                  src={perfume.image}
-                  alt=""
-                  className="card-image"
-                />
-                <CardBody>
-                  <div className="card-text">
-                    <CardSubtitle>
-                      Scent Category: {perfume.category}
-                    </CardSubtitle>
-                  </div>
+              <div className="index-content">
+                <div>
+                  <img
+                    src={perfume.image}
+                    alt="perfume"
+                    className="item-image"
+                  />
+                </div>
+                <div className="item-info">
+                  <p>
+                    <b>{perfume.name}</b>
+                  </p>
+                  <p>by {perfume.designer}</p>
+                  <p>Scent Category: {perfume.category}</p>
                   <NavLink
                     to={`/perfumeshow/${perfume.id}`}
                     className="nav-link"
                   >
                     <Button className="card-button">More Details</Button>
                   </NavLink>
-                </CardBody>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>

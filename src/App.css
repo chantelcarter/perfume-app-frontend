@@ -94,16 +94,6 @@ body {
   color: black !important;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: row;
-}
-
-.card {
-  width: 200px;
-  margin: 10px;
-}
-
 .about-image {
   width: 336.4px;
   height: 519.6px;
@@ -122,6 +112,37 @@ body {
 
 .member-image{
   width: 350px;
+}
+
+/* PerfumeIndex Styling */
+
+.index-body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.index-content {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-image {
+  width: 150px;
 }
 
 /* PerfumeNew and PerfumeEdit Styling */
