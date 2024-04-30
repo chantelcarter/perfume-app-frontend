@@ -22,21 +22,57 @@ const SignUp = ({signUp}) => {
     e.target.reset()
   }
   return (
-      <div className='auth-body'>
+    <div className='sign-content-body'>
+      <div className='sign-form-container'>
         <h2>Sign Up</h2>
-      <form className="form-div" ref={formRef} onSubmit={handleSubmit}>
-        Email: <input type="email" name="email" placeholder='email'/>
-        <br />
-        Password: <input type='password' name='password' placeholder='password' />
-        <br />
-        Confirm Password: <input type='password' name='password_confirmation' placeholder='confirm password' />
-        <br />
-        <input className='actions' type='submit' value='submit'/>
-        <br></br>
-        <div>
-        Already registered? <NavLink to="/signin">Sign In</NavLink>
-        </div>
-      </form>
+        <form className="sign-form" ref={formRef} onSubmit={handleSubmit}>
+          <div className='sign-form-group-container'>
+            <div className='sign-form-group'>
+              <label>
+                Email:{" "}
+                <input
+                  type="email"
+                  name="email"
+                  className="sign-form-input"
+                  placeholder='email'
+                />
+              </label>
+            </div>
+            <div className='sign-form-group'>
+              <label>
+                Password:{" "}
+                <input
+                  type='password'
+                  name='password'
+                  className="sign-form-input"
+                  placeholder='password'
+                />
+              </label>
+            </div>
+            <div className='sign-form-group'>
+              <label>
+                Confirm Password:{" "}
+                <input
+                  type='password'
+                  name='password_confirmation'
+                  className="sign-form-input"
+                  placeholder='confirm password'
+                />
+              </label>
+            </div>
+          </div>
+          <div className='sign-submit'>
+            <input className='sign-submit-button' type='submit' value='submit'/>
+          </div>
+          <div>
+            <hr/>
+            Already registered?{" "}
+            <NavLink to="/signin">
+              Sign In
+            </NavLink>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

@@ -144,6 +144,113 @@ body {
   width: 350px;
 }
 
+/* PerfumeNew and PerfumeEdit Styling */
+
+.content-body {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.form-group {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+input.form-input {
+  min-width: 400px;
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+/* SignIn and SignUp Styling */
+
+.sign-content-body {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-form-container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sign-form-group-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.sign-form-group {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+  height: 38px;
+}
+
+input.sign-form-input {
+  min-width: 400px;
+  max-width: 400px;
+  margin-left: 20px;
+  height: 38px;
+}
+
+.sign-submit {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.sign-submit-button {
+  height: 38px;
+  width: 77.17px;
+}
+
 /* NotFound Styling */
 
 .notfound-container {
