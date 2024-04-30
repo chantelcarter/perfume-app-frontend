@@ -22,40 +22,49 @@ import { useNavigate, NavLink } from "react-router-dom"
       e.target.reset()
     }
     return (
-      <div className="auth-body">
-      <h2 className="header">Sign In</h2>
-      <form className="form-div" ref={formRef} onSubmit={handleSubmit}>
-        <label>
-          Email:{" "}
-          <input
-            className="field-auth-flex"
-            type="email"
-            name="email"
-            placeholder="email"
-            required
-          />
-        </label>
-        <label>
-          Password:{" "}
-          <input
-            className="field-auth-flex"
-            type="password"
-            name="password"
-            placeholder="password"
-            required
-          />
-        </label>
-        <br />
-        <input className="actions" type="submit" value="Sign In" />
-        <div className="links">
-          Not registered yet?{" "}
-          <NavLink to="/signup">
-            <u>Sign Up</u>
-          </NavLink>
+      <div className="sign-content-body">
+        <div className='sign-form-container'>
+          <h2>Sign In</h2>
+          <form className="sign-form" ref={formRef} onSubmit={handleSubmit}>
+            <div className='sign-form-group-container'>
+              <div className='sign-form-group'>
+                <label>
+                  Email:{" "}
+                  <input
+                    type="email"
+                    name="email"
+                    className="sign-form-input"
+                    placeholder="email"
+                    required
+                  />
+                </label>
+              </div>
+              <div className='sign-form-group'>
+                <label>
+                  Password:{" "}
+                  <input
+                    type="password"
+                    name="password"
+                    className="sign-form-input"
+                    placeholder="password"
+                    required
+                  />
+                </label>
+              </div>
+            </div>
+            <div className='sign-submit'>
+              <input className="sign-submit-button" type="submit" value="Sign In" />
+            </div>
+            <div>
+              <hr/>
+              Not registered yet?{" "}
+              <NavLink to="/signup">
+                Sign Up
+              </NavLink>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-  
+      </div>
     )
   }
 

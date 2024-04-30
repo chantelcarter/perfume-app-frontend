@@ -26,81 +26,92 @@ const PerfumeNew = ({ createPerfume, currentUser }) => {
 
   return (
     <>
-       {currentUser?.id && (
-        <div className="form-container">
-          <h1>Add a Perfume</h1>
-          <Form className="form">
-            <FormGroup className="form-group-name">
-              <Label for="name">Name: </Label>
-              <Input
-                type="text"
-                name="name"
-                onChange={handleChange}
-                value={myPerfume.name}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-sci-name">
-              <Label for="designer">Designer: </Label>
-              <Input
-                type="text"
-                name="designer"
-                onChange={handleChange}
-                value={myPerfume.designer}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-summary">
-              <Label for="category">Category: </Label>
-              <Input
-                type="text"
-                name="category"
-                onChange={handleChange}
-                value={myPerfume.category}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-benefit">
-              <Label for="top_notes">Top Notes: </Label>
-              <Input
-                type="text"
-                name="top_notes"
-                onChange={handleChange}
-                value={myPerfume.top_notes}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-warning">
-              <Label for="middle_notes">Middle Notes: </Label>
-              <Input
-                type="text"
-                name="middle_notes"
-                onChange={handleChange}
-                value={myPerfume.middle_notes}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-warning">
-              <Label for="base_notes">Base Notes: </Label>
-              <Input
-                type="text"
-                name="base_notes"
-                onChange={handleChange}
-                value={myPerfume.base_notes}
-              />
-            </FormGroup>
-            <FormGroup className="form-group-image">
-              <Label for="form-image">Image URL: </Label>
-              <Input
-                type="text"
-                name="image"
-                onChange={handleChange}
-                value={myPerfume.image}
-              />
-            </FormGroup>
-            <div className="submit">
-              <Button onClick={handleSubmit} className="new-button">
-                Submit
-              </Button>
-            </div>
-          </Form>
-        </div>
-      )}
+      <div className="content-body">
+        {currentUser?.id && (
+          <div className="form-container">
+            <h1>Add a Perfume</h1>
+            <Form className="form">
+              <div className="form-group-container">
+                <FormGroup className="form-group">
+                  <Label for="name">Name: </Label>
+                  <Input
+                    type="text"
+                    name="name"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.name}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="designer">Designer: </Label>
+                  <Input
+                    type="text"
+                    name="designer"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.designer}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="category">Category: </Label>
+                  <Input
+                    type="text"
+                    name="category"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.category}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="top_notes">Top Notes: </Label>
+                  <Input
+                    type="text"
+                    name="top_notes"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.top_notes}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="middle_notes">Middle Notes: </Label>
+                  <Input
+                    type="text"
+                    name="middle_notes"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.middle_notes}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="base_notes">Base Notes: </Label>
+                  <Input
+                    type="text"
+                    name="base_notes"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.base_notes}
+                  />
+                </FormGroup>
+                <FormGroup className="form-group">
+                  <Label for="form-image">Image URL: </Label>
+                  <Input
+                    type="text"
+                    name="image"
+                    className="form-input"
+                    onChange={handleChange}
+                    value={myPerfume.image}
+                  />
+                </FormGroup>
+              </div>
+              <div className="submit">
+                <Button onClick={handleSubmit} className="new-button">
+                  Submit
+                </Button>
+              </div>
+            </Form>
+          </div>
+        )}
+      </div>
     </>
   )
 } 
