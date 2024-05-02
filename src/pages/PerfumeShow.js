@@ -9,16 +9,31 @@ const PerfumeShow = ({ perfumes }) => {
   return (
     <>
       <div className="show-body">
-        <div className="show-contents">
+        <div className="show-container">
           <img className="show-image" src={currentPerfume?.image} alt="bottle of perfume"/>
-          <h2 className="show-name">{currentPerfume?.name}</h2>
-          <h3 className="show-designer">by {currentPerfume?.designer}</h3>
-            <br />
-            <b className="card-sections"> Top Notes:</b> {currentPerfume?.top_notes}
-            <br />
-            <b className="card-sections"> Middle Notes:</b> {currentPerfume?.middle_notes}
-            <br />
-            <b className="card-sections"> Base Notes:</b> {currentPerfume?.base_notes}
+          <div className="show-content">
+            <div className="show-name">
+              <h2>{currentPerfume?.name}</h2>
+              <h3>by {currentPerfume?.designer}</h3>
+              <div>
+                <b>Scent Category:</b> {currentPerfume?.category}
+              </div>
+            </div>
+
+            <div className="show-notes">
+              <hr/>
+              <div className="show-note-item">
+                <b> Top Notes:</b> {currentPerfume?.top_notes}
+              </div>
+              <div className="show-note-item">
+                <b> Middle Notes:</b> {currentPerfume?.middle_notes}
+              </div>
+              <div className="show-note-item">
+                <b> Base Notes:</b> {currentPerfume?.base_notes}
+              </div>
+              <hr/>
+            </div>
+          </div>
         </div>
         <br />
         <NavLink to={`/perfumeindex`}>

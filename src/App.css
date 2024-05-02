@@ -201,6 +201,28 @@ input.form-input {
   justify-content: center;
 }
 
+/* PerfumeShow Styling */
+
+.show-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.show-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.show-notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-image{
+  width: 300px;
+}
 /* SignIn and SignUp Styling */
 
 .sign-content-body {
