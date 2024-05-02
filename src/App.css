@@ -134,6 +134,8 @@ body {
   display: flex;
   flex-direction: row;
   margin: 10px;
+  text-align: center;
+  max-width: 150px;
 }
 
 .item-info {
@@ -141,8 +143,13 @@ body {
   flex-direction: column;
 }
 
+.item-info p {
+  line-height: 1;
+}
+
 .item-image {
   width: 150px;
+  padding-bottom: 10px;
 }
 
 /* PerfumeNew and PerfumeEdit Styling */
