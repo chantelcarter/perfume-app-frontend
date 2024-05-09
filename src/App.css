@@ -203,6 +203,11 @@ input.form-input {
 
 /* PerfumeShow Styling */
 
+.show-body {
+  background-color: #fff;
+  padding: 10px;
+}
+
 .show-container {
   background-color: #fff;
   display: flex;
@@ -223,6 +228,15 @@ input.form-input {
 .show-image{
   width: 300px;
 }
+
+.show-link-back a { 
+  text-decoration: none;
+}
+
+.show-link-back a:hover {
+  text-decoration: underline;
+}
+
 /* SignIn and SignUp Styling */
 
 .sign-content-body {
@@ -288,6 +302,20 @@ input.sign-form-input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* TermsosService Styling */
+
+.terms-body {
+  background-color: #fff;
+}
+
+.terms-list {
+  list-style-type: upper-alpha;
+}
+
+.terms-sublist {
+  list-style-type: upper-roman;
 }
 
 /* Footer */

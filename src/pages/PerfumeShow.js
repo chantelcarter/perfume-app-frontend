@@ -9,6 +9,11 @@ const PerfumeShow = ({ perfumes }) => {
   return (
     <>
       <div className="show-body">
+        <div className="show-link-back">
+            <NavLink to={`/perfumeindex`}>
+              Back to Perfumes
+            </NavLink>
+          </div>
         <div className="show-container">
           <img className="show-image" src={currentPerfume?.image} alt="bottle of perfume"/>
           <div className="show-content">
@@ -35,10 +40,6 @@ const PerfumeShow = ({ perfumes }) => {
             </div>
           </div>
         </div>
-        <br />
-        <NavLink to={`/perfumeindex`}>
-          <Button className="button">Back to Perfumes</Button>
-        </NavLink>
       </div>
     </>
   );
