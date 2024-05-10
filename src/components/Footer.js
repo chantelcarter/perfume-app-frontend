@@ -14,13 +14,7 @@ const Footer = () => {
                     Contact Us
                 </NavLink>
                 <p>
-                All Rights Reserved - do not copy anything without prior written permission. Please read the 
-                    <NavLink to="/terms-of-service" className="footer-link">
-                        Terms of Service
-                    </NavLink> and 
-                    <NavLink to="/privacy-policy" className="footer-link">
-                        Privacy policy
-                    </NavLink>.  
+                All Rights Reserved - do not copy anything without prior written permission. 
                 </p>
             </div>
            </footer>
