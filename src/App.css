@@ -297,11 +297,17 @@ input.sign-form-input {
 
 /* NotFound Styling */
 
+.notfound-body {
+  background-color: #fff;
+  margin: 10px;
+}
+
 .notfound-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #fff;
 }
 
 /* TermsosService Styling */
