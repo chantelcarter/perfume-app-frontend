@@ -9,8 +9,6 @@ import SignUp from "./pages/SignUp"
 import AboutUs from "./pages/AboutUs"
 import ContactUs from "./pages/ContactUs"
 import Faq from "./pages/Faq"
-import TermsOfService from "./pages/TermsOfService"
-import PrivacyPolicy from "./pages/PrivacyPolicy"
 import PerfumeIndex from "./pages/PerfumeIndex"
 import PerfumeShow from "./pages/PerfumeShow"
 import PerfumeProtectedIndex from "./pages/PerfumeProtectedIndex"
@@ -152,8 +150,6 @@ const App = () => {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/perfumeindex" element={<PerfumeIndex perfumes={perfumes} />} />
         {currentUser && (      
           <Route path="/myperfumes" element={<PerfumeProtectedIndex perfumes={perfumes} currentUser={currentUser} deletePerfume={deletePerfume} />} />
