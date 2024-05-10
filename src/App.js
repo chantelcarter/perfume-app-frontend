@@ -15,8 +15,6 @@ import PerfumeProtectedIndex from "./pages/PerfumeProtectedIndex"
 import PerfumeNew from "./pages/PerfumeNew"
 import PerfumeEdit from "./pages/PerfumeEdit"
 import NotFound from "./pages/NotFound"
-import mockUsers from './mockUsers'
-import mockPerfumes from './mockPerfumes'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
