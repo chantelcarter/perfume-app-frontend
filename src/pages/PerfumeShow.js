@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, NavLink } from "react-router-dom";
-import { Button } from "reactstrap";
+// import { Button } from "reactstrap";
+import Recommendations from "../components/Recommendations";
 
 const PerfumeShow = ({ perfumes }) => {
   let { id } = useParams();
@@ -40,6 +41,10 @@ const PerfumeShow = ({ perfumes }) => {
             </div>
           </div>
         </div>
+        <hr/>
+        <p>If you like <b>{currentPerfume.name}</b>, we recommend you try:</p>
+        <Recommendations perfumes={perfumes.filter(perfume => perfume.category === currentPerfume?.category)} currentPerfume={currentPerfume?.id} />
+        <hr/>
       </div>
     </>
   );
