@@ -205,7 +205,7 @@ input.form-input {
 
 .show-body {
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 100px 10px 100px;
 }
 
 .show-container {
