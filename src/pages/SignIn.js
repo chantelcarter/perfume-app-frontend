@@ -24,29 +24,27 @@ import { useNavigate, NavLink } from "react-router-dom"
     return (
       <div className="sign-content-body">
         <div className='sign-form-container'>
-          <h2>Sign In</h2>
+          <h2>Log In To Your Account</h2>
           <form className="sign-form" ref={formRef} onSubmit={handleSubmit}>
             <div className='sign-form-group-container'>
               <div className='sign-form-group'>
                 <label>
-                  Email:{" "}
                   <input
                     type="email"
                     name="email"
                     className="sign-form-input"
-                    placeholder="email"
+                    placeholder="Enter E-mail Address"
                     required
                   />
                 </label>
               </div>
               <div className='sign-form-group'>
                 <label>
-                  Password:{" "}
                   <input
                     type="password"
                     name="password"
                     className="sign-form-input"
-                    placeholder="password"
+                    placeholder="Enter Password"
                     required
                   />
                 </label>

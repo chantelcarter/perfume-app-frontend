@@ -157,6 +157,7 @@ body {
 .content-body {
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
 .form-container {
@@ -262,6 +263,8 @@ input.form-input {
 .sign-content-body {
   display: flex;
   justify-content: center;
+  background-color: #fff;
+  padding-top: 20px;
 }
 
 .sign-form-container {
