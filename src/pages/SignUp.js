@@ -29,40 +29,37 @@ const SignUp = ({signUp}) => {
           <div className='sign-form-group-container'>
             <div className='sign-form-group'>
               <label>
-                Email:{" "}
                 <input
                   type="email"
                   name="email"
                   className="sign-form-input"
-                  placeholder='email'
+                  placeholder='Enter E-mail Address'
                 />
               </label>
             </div>
             <div className='sign-form-group'>
               <label>
-                Password:{" "}
                 <input
                   type='password'
                   name='password'
                   className="sign-form-input"
-                  placeholder='password'
+                  placeholder='Enter Password'
                 />
               </label>
             </div>
             <div className='sign-form-group'>
               <label>
-                Confirm Password:{" "}
                 <input
                   type='password'
                   name='password_confirmation'
                   className="sign-form-input"
-                  placeholder='confirm password'
+                  placeholder='Confirm Password'
                 />
               </label>
             </div>
           </div>
           <div className='sign-submit'>
-            <input className='sign-submit-button' type='submit' value='submit'/>
+            <input className='sign-submit-button' type='submit' value='Sign Up'/>
           </div>
           <div>
             <hr/>
