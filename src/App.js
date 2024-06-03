@@ -30,14 +30,14 @@ const App = () => {
   }, [])
 
   const readPerfume = () => {
-    fetch("http://localhost:3000/perfumes")
+    fetch("https://perfume-app-backend.onrender.com/perfumes")
       .then((response) => response.json())
       .then((data) => setPerfumes(data))
       .catch((errors) => console.log("Perfume read errors:", errors))
   }
 
   const createPerfume = (perfume) => {
-    fetch("http://localhost:3000/perfumes", {
+    fetch("https://perfume-app-backend.onrender.com/perfumes", {
       body: JSON.stringify(perfume),
       headers: {
         "Content-Type": "application/json"
@@ -50,7 +50,7 @@ const App = () => {
   }
 
   const updatePerfume = (perfume, id) => {
-    fetch(`http://localhost:3000/perfumes/${id}`, {
+    fetch(`https://perfume-app-backend.onrender.com/perfumes/${id}`, {
       body: JSON.stringify(perfume),
       headers: {
         "Content-Type": "application/json"
@@ -63,7 +63,7 @@ const App = () => {
   }
 
   const deletePerfume = (id) => {
-    fetch(`http://localhost:3000/perfumes/${id}`, {
+    fetch(`https://perfume-app-backend.onrender.com/perfumes/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -75,7 +75,7 @@ const App = () => {
   }
 
   const signUp = (userInfo) => {
-    fetch("http://localhost:3000/signup", {
+    fetch("https://perfume-app-backend.onrender.com/signup", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const App = () => {
   }
 
   const signIn = (userInfo) => {
-    fetch("http://localhost:3000/login", {
+    fetch("https://perfume-app-backend.onrender.com/login", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const App = () => {
   }
 
   const logout = () => {
-    fetch(`http://localhost:3000/logout`, {
+    fetch(`https://perfume-app-backend.onrender.com/logout`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("token"),
