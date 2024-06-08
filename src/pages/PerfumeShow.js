@@ -49,7 +49,7 @@ const PerfumeShow = ({ perfumes, deletePerfume }) => {
                 Edit the information about this perfume.
               </NavLink>
               <a
-                href="#"
+                href="/perfumeindex"
                 onClick={handleDelete}
                 className="perfume-button"
               >

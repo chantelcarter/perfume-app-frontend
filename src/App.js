@@ -66,7 +66,6 @@ const App = () => {
   const deletePerfume = (id) => {
     fetch(`https://perfume-app-backend.onrender.com/perfumes/${id}`, {
     // fetch(`http://localhost:3000/perfumes/${id}`, {
-
       headers: {
         "Content-Type": "application/json"
       },
