@@ -3,9 +3,16 @@ import { useParams, NavLink } from "react-router-dom";
 // import { Button } from "reactstrap";
 import Recommendations from "../components/Recommendations";
 
-const PerfumeShow = ({ perfumes }) => {
+const PerfumeShow = ({ perfumes, deletePerfume }) => {
   let { id } = useParams();
   const currentPerfume = perfumes?.find((perfume) => perfume.id === +id);
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    if (currentPerfume) {
+      deletePerfume(currentPerfume.id);
+    }
+  }
 
   return (
     <>
@@ -38,6 +45,17 @@ const PerfumeShow = ({ perfumes }) => {
                 <b> Base Notes:</b> {currentPerfume?.base_notes}
               </div>
               <hr/>
+              <NavLink to={`/perfumeedit/${currentPerfume?.id}`}>
+                Edit the information about this perfume.
+              </NavLink>
+              <a
+                href="#"
+                onClick={handleDelete}
+                className="perfume-button"
+              >
+                Delete Perfume
+              </a>
+
             </div>
           </div>
         </div>
