@@ -31,6 +31,7 @@ const App = () => {
 
   const readPerfume = () => {
     fetch("https://perfume-app-backend.onrender.com/perfumes")
+    // fetch("http://localhost:3000/perfumes")
       .then((response) => response.json())
       .then((data) => setPerfumes(data))
       .catch((errors) => console.log("Perfume read errors:", errors))
@@ -64,6 +65,8 @@ const App = () => {
 
   const deletePerfume = (id) => {
     fetch(`https://perfume-app-backend.onrender.com/perfumes/${id}`, {
+    // fetch(`http://localhost:3000/perfumes/${id}`, {
+
       headers: {
         "Content-Type": "application/json"
       },
@@ -152,7 +155,7 @@ const App = () => {
         {currentUser && (      
           <Route path="/myperfumes" element={<PerfumeProtectedIndex perfumes={perfumes} currentUser={currentUser} deletePerfume={deletePerfume} />} />
         )}
-        <Route path="/perfumeshow/:id" element={<PerfumeShow perfumes={perfumes} />} />
+        <Route path="/perfumeshow/:id" element={<PerfumeShow perfumes={perfumes} deletePerfume={deletePerfume} />} />
         <Route path="/perfumenew" element={<PerfumeNew currentUser={currentUser} createPerfume={createPerfume} />} />
         <Route path="/perfumeedit/:id" element={<PerfumeEdit perfumes={perfumes} updatePerfume={updatePerfume} />} />
         <Route path="*" element={<NotFound />} />
