@@ -9,7 +9,7 @@ const NewestArrivals = ({ perfumes }) => {
             <hr/>
             {
                 perfumes.map((perfume) => (
-                    <div>
+                    <div key={perfume.id}>
                         <NavLink
                         to={`/perfumeshow/${perfume.id}`}
                         className="nav-link"
