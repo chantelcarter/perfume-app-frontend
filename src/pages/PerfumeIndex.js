@@ -9,7 +9,7 @@ const PerfumeIndex = ({ perfumes }) => {
         <div className="index-container">
           {perfumes?.map((perfume, index) => {
             return (
-              <div className="index-content">
+              <div key={perfume.id} className="index-content">
                 <NavLink
                   to={`/perfumeshow/${perfume.id}`}
                   className="nav-link"

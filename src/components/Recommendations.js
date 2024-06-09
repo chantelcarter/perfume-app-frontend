@@ -7,7 +7,7 @@ const Recommendations = ({ perfumes, currentPerfume }) => {
     <div className='recommendations-container'>
         {
             recommendations.map((perfume) => (
-                <div className='recommendations-content'>
+                <div key={perfume.id} className='recommendations-content'>
                     <NavLink
                     to={`/perfumeshow/${perfume.id}`}
                     className="nav-link"
