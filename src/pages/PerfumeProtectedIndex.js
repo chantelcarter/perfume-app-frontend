@@ -20,21 +20,24 @@ const PerfumeProtectedIndex = ({ perfumes, currentUser, deletePerfume }) => {
                   <CardSubtitle>
                     by {perfume.designer}
                   </CardSubtitle>
-                  <CardImg top width="100%" src={perfume.image} alt="" className="perfume-picture"/>
-                  <CardBody>
-                    <div className="perfume-text">
-                      <CardSubtitle>
-                        Category: {perfume.category}
-                      </CardSubtitle>  
+                  <div className='card-contents'>
+                    <div className='image-container'>
+                      <CardImg src={perfume.image} alt="" className="perfume-image"/>
                     </div>
-                    <NavLink to={`/perfumeshow/${perfume.id}`} className="nav-link">
-                      <Button className='perfume-button'>More Details</Button>
-                    </NavLink>
-                    <NavLink to={`/perfumeedit/${perfume.id}`}>
-                      <Button className='perfume-button'>Edit Perfume</Button>
-                    </NavLink>
-                    <Button onClick={() => deletePerfume(perfume.id)} className='perfume-button'>Delete Perfume</Button>
-                  </CardBody>
+                    <div className='card-body-container'>
+                      <CardBody className='card-body'>
+                        <NavLink to={`/perfumeshow/${perfume.id}`} className="nav-link">
+                          <Button className='perfume-button'>More Details</Button>
+                        </NavLink>
+                        <NavLink to={`/perfumeedit/${perfume.id}`}>
+                          <Button className='perfume-button'>Edit Perfume</Button>
+                        </NavLink>
+                        <Button onClick={() => deletePerfume(perfume.id)} className='perfume-button'>Delete Perfume</Button>
+                      </CardBody>
+                    </div>
+                  </div>
+                  
+                  
                 </Card>
             )
           })}

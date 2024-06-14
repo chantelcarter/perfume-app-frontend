@@ -333,18 +333,19 @@ input.sign-form-input {
   background-color: #fff;
 }
 
-/* TermsosService Styling */
+/* PerfumeProtectedIndex Styling */
 
-.terms-body {
-  background-color: #fff;
+.card-contents {
+  display: flex;
 }
 
-.terms-list {
-  list-style-type: upper-alpha;
+.perfume-image {
+  max-width: 300px;
 }
 
-.terms-sublist {
-  list-style-type: upper-roman;
+.card-body-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Footer */

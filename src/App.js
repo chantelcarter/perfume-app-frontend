@@ -39,6 +39,7 @@ const App = () => {
 
   const createPerfume = (perfume) => {
     fetch("https://perfume-app-backend.onrender.com/perfumes", {
+    // fetch("http://localhost:3000/perfumes", {
       body: JSON.stringify(perfume),
       headers: {
         "Content-Type": "application/json"
@@ -78,6 +79,7 @@ const App = () => {
 
   const signUp = (userInfo) => {
     fetch("https://perfume-app-backend.onrender.com/signup", {
+    // fetch("http://localhost:3000/signup", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -101,6 +103,7 @@ const App = () => {
 
   const signIn = (userInfo) => {
     fetch("https://perfume-app-backend.onrender.com/login", {
+    // fetch("http://localhost:3000/login", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -123,7 +126,8 @@ const App = () => {
   }
 
   const logout = () => {
-    fetch(`https://perfume-app-backend.onrender.com/logout`, {
+    // fetch(`https://perfume-app-backend.onrender.com/logout`, {
+    fetch(`http://localhost:3000/logout`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("token"),
